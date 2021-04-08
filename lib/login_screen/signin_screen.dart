@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:q_final_project/dashboard/dashboard.dart';
+import 'package:get/get.dart';
 
 class SigninScreen extends StatefulWidget {
   @override
@@ -50,7 +52,7 @@ class _SigninScreenState extends State<SigninScreen> {
           ),
           ElevatedButton(
             onPressed: () {
-              print("Ngu");
+              Get.off(Dashboard());
             },
             child: Center(
               child: Text("Sign in"),
