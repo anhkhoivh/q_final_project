@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:q_final_project/home_screen/listing_page.dart';
 import 'package:q_final_project/home_screen/top_new_widget.dart';
 import 'package:q_final_project/home_screen/top_trending.dart';
 
@@ -23,7 +24,9 @@ class HomeScreen extends StatelessWidget {
                   style: ButtonStyle(
                       backgroundColor:
                           MaterialStateProperty.all(Colors.grey.shade700)),
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.to(ListingPage('New'));
+                  },
                   child: Row(
                     children: [
                       Text("See all"),
@@ -48,7 +51,9 @@ class HomeScreen extends StatelessWidget {
                   style: ButtonStyle(
                       backgroundColor:
                           MaterialStateProperty.all(Colors.grey.shade700)),
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.to(ListingPage('Trending'));
+                    },
                   child: Row(
                     children: [
                       Text("See all"),

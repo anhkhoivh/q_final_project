@@ -6,7 +6,7 @@ import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:q_final_project/component.dart';
-import 'package:q_final_project/home_screen/horizontal_list_item.dart';
+import 'package:q_final_project/widgets/horizontal_list_item.dart';
 
 class TopTrending extends StatefulWidget {
   @override
@@ -17,14 +17,13 @@ class _TopTrendingState extends State<TopTrending> {
   var topTrending;
   @override
   initState() {
-    var response = recommend;
     // await http.post(
     //     Uri.parse("https://api.itedu.me/course/top-new"),
     //     headers: {"Accept": "application/json"},
     //     body: {"limit": 10, "page": 1});
     // var body = json.decode(response.body);
     // print(body);
-    this.topTrending = response["payload"];
+    this.topTrending = top_trending["payload"];
     print(topTrending);
   }
 
